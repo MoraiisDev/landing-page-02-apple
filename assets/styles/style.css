@@ -328,8 +328,8 @@ footer {
   .container-copyright {
     display: flex;
     justify-content: space-between;
-    margin: 0 244px 12px;
-    padding: 10px 0;
+    margin: 0 244px;
+    padding-bottom: 12px;
   }
 
   .copyright-details__country {
