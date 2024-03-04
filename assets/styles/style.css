@@ -1,19 +1,20 @@
 :root {
   --color-black: #000;
-  --color-second-black:#1D1D1F;
+  --color-second-black: #1D1D1F;
+
   --color-white: #fff;
-  --color-secondarywhite:#F5F5F7;
+  --color-secondary-white: #F5F5F7;
+
   --color-blue: #2997FF;
   --color-dark-blue: #0066CC;
+  
   --color-gray: #6E6E73;
-  --color-lighteen-gray: #FBFBFD;
   --color-darken-gray: #1D1D1F;
-  --header-height: 44px;
-
-  --color-light-conditions: #6E6E73;
-  --color-dark-conditions: #424245;
-
+  --color-lighteen-gray: #FBFBFD;
   --color-third-gray: #424245;
+  --color-hr: #D2D2D7;
+  
+  --header-height: 44px;
 }
 
 body {
@@ -36,6 +37,7 @@ body {
 
 header {
   background-color: var(--color-black);
+
   .container {
     display: flex;
     align-items: center;
@@ -45,7 +47,7 @@ header {
 }
 
 .navigation {
-  ul { 
+  ul {
     display: flex;
 
     li {
@@ -62,7 +64,7 @@ header {
 .header-actions {
   display: flex;
   align-items: center;
-  
+
   button {
     margin: 0 25px;
   }
@@ -74,7 +76,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url();
   background-size: cover;
 
   .title {
@@ -146,12 +147,12 @@ header {
   .description.dark {
     font-size: 28px;
   }
-  
+
   .links {
     margin: 15px 0 20px;
     display: flex;
     align-items: center;
-    
+
     .link {
       margin: 0 20px;
     }
@@ -181,7 +182,7 @@ header {
         display: flex;
 
         .link {
-        margin: 10px;
+          margin: 10px;
         }
       }
     }
@@ -189,25 +190,32 @@ header {
     .card-item:first-child {
       background-image: url(../imgs/card-iphone.jpg);
     }
-    .card-item:nth-child(2){
+
+    .card-item:nth-child(2) {
       background-image: url(../imgs/card-ipad.png);
     }
-    .card-item:nth-child(3){
+
+    .card-item:nth-child(3) {
       background-image: url(../imgs/card-AirPods.png);
     }
   }
-  .card-item:nth-child(4){
+
+  .card-item:nth-child(4) {
     background-image: url(../imgs/card-watch.png);
   }
-  .card-item:nth-child(5){
+
+  .card-item:nth-child(5) {
     background-image: url(../imgs/watch-ultra.png);
   }
-  .card-item:last-child{
+
+  .card-item:last-child {
     background-image: url(../imgs/card.png);
   }
 }
 
 .section-carousel {
+  margin-top: 20px;
+
   img {
     width: 100%;
   }
@@ -229,7 +237,7 @@ header {
 }
 
 .description.light {
-  color: var(--color-secondarywhite);
+  color: var(--color-secondary-white);
 }
 
 .description.dark {
@@ -250,42 +258,81 @@ header {
 }
 
 footer {
-max-width: 100%;
+  max-width: 100%;
+  background-color: var(--color-secondary-white);
   
+  p {
+    color: var(--color-third-gray);
+    text-shadow: 0.1em 0.3em 0.8em var(--color-third-gray);
+    font-size: 12px;
+  }
+
   .container-terms-of-offer {
     display: flex;
     flex-direction: column;
-    font-size: 12px;
-    margin: 17px 244px 12px;
-    
+    justify-content: center;
+    margin: 0px 244px 12px;
+    padding-top: 20px;
+
     .offer-paragraphs {
-      color: var(--color-light-conditions);
+      color: var(--color-gray);
       margin-bottom: 12px;
-      text-shadow: 0.1em 0.1em 0.5em var(--color-dark-conditions);
-      
-      strong, a {
+
+      strong,
+      a {
         color: var(--color-darken-gray);
       }
     }
   }
-}
 
-.footer-details {
-  font-size: 12px;
-  color: var(--color-third-gray);
+  .container-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 244px 12px;
+    padding-top: 17px;
+    border-top: solid 1px var(--color-hr);;
+    
+    .footer-details {
+      p {
+        margin-bottom: 10px;
+      }
 
-}
-.title-details {
-  font-weight: 700;
-  color: var(--color-darken-gray);
-}
+      .title-details {
+        font-weight: 700;
+        color: var(--color-darken-gray);
+      }
+      
+    .container-services__columns {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25px;
+      
 
-.container-details {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  
-  .footer-details {
-    margin-right: 20px;
+      .footer-details {
+        margin: 0 20px 25px 0;
+        }
+      }
+    }
+  }
+
+  .container-more-ways {
+    padding-bottom: 10px;
+    border-bottom: solid 1px var(--color-hr);
+    margin: 34px 244px 12px;
+
+    a {
+      color: var(--color-dark-blue);
+    }
+  }
+
+  .container-copyright {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 244px 12px;
+    padding: 10px 0;
+  }
+
+  .copyright-details__country {
+    color: var(--color-third-gray);
   }
 }
